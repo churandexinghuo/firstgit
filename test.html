@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>评分系统</title>
+    <script src="./jquery-3.1.0.js"></script>
+    <script src="./jq.rater.js"></script>
+    <style>
+    div>span {
+        font-size: 40px;
+        font-family: '黑体';
+        color: orange;
+    }
+    </style>
+    <script>
+    $(function() {
+        $('div').rater({
+            max: 10,
+            click_after: function(item, score) {
+                alert('本次' + item.title + '得分为:' + score + '分');
+            }
+        })
+    })
+    </script>
+</head>
+
+<body>
+    服务态度:
+    <div title="服务态度"></div>
+    商品评价:
+    <div title="商品评价"></div>
+</body>
+
+</html>
